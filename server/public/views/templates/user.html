@@ -23,7 +23,7 @@
             <td>{{item.itemDescription}}</td>
             <td>{{item.itemUrl}}</td>
             <td>{{item.userName}}</td>
-            <td><button ng-click="sc.deleteItem(item._id)" class="btn btn-danger">Take off Shelf!</button></td>
+            <td><button ng-click="sc.deleteItem(item._id)" class="btn btn-danger" ng-show="item.userName == sc.name">Take off Shelf!</button></td>
           </tr>
         </tbody>
       </table>

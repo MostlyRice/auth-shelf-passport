@@ -22,9 +22,13 @@ myApp.service('UserService', ['$http', '$location', function ($http, $location) 
     $http.get('/user/logout').then(function (response) {
       console.log('logged out');
       $location.path("/home");
+      self.reset();
     });
   }
 
+self.reset = function() {
+  location.reload(true);
+}
 
 
 }]);
