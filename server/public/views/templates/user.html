@@ -4,3 +4,25 @@
     <h1 id="welcome" class="lead">Welcome, {{vm.userObject.userName}}!</h1>
     <button class="btn btn-default" ng-click="vm.userService.logout()">Log Out</button>
 </div>
+
+
+<div class="container" ng-controller="ShelfController as sc">
+    <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Image</th>
+            <th>User</th>
+          </tr>
+        </thead>
+        <tbody ng-repeat="item in sc.shelfObject.list">
+          <tr>
+            <td>{{item.itemName}}</td>
+            <td>{{item.itemDescription}}</td>
+            <td>{{item.itemUrl}}</td>
+            <td>{{item.userName}}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>

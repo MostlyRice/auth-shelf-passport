@@ -24,4 +24,7 @@ myApp.service('UserService', ['$http', '$location', function ($http, $location) 
       $location.path("/home");
     });
   }
+
+
+
 }]);
