@@ -1,6 +1,21 @@
 <div ng-include="'views/partials/nav.html'"></div>
 <div class="container">
-  <p>
-    In Info
-  </p>
+  <h2>Put Something on the Shelf!</h2>
+  <form class="col-md-12">
+      <div class="form-group col-md-8">
+      <label for="itemName">Item Name:</label>
+      <input type="text" name="itemName" class="form-control" ng-model="vm.newItem.itemName" placeholder="Name"/>
+      </div>
+      <div class="form-group col-md-8">
+      <label for="description">Item Description:</label>
+      <input type="text" name="description" class="form-control" ng-model="vm.newItem.itemDescription" placeholder="Description"/>
+      </div>
+      <div class="form-group col-md-8">
+      <label for="url">Item Image:</label>
+      <input type="text" name="url" class="form-control" ng-model="vm.newItem.itemUrl" placeholder="Image"/>
+      </div>
+      <div class="form-group col-md-6">
+      <button ng-click="vm.addItem(vm.newItem, vm.name)" class="btn btn-success">Place on Shelf!</button>
+      </div>
+      </form>
 </div>
