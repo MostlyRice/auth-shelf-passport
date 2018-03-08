@@ -33,6 +33,20 @@ self.addItem = function(newItem, name) {
     })
 }
 
+self.deleteItem = function(id) {
+    console.log('delete this item', id);
+    $http({
+        method: 'DELETE',
+        url: `/shelf/${id}`,
+        data: id
+    }).then(function (response) {
+          console.log('success delete');
+          self.getShelf();
+      })
+      .catch(function (response) {
+          console.log('error delete', response);
+      });
+}
 
 
 

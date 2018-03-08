@@ -14,6 +14,7 @@
             <th>Description</th>
             <th>Image</th>
             <th>User</th>
+            <th>Remove From Shelf</th>
           </tr>
         </thead>
         <tbody ng-repeat="item in sc.shelfObject.list">
@@ -22,6 +23,7 @@
             <td>{{item.itemDescription}}</td>
             <td>{{item.itemUrl}}</td>
             <td>{{item.userName}}</td>
+            <td><button ng-click="sc.deleteItem(item._id)" class="btn btn-danger">Take off Shelf!</button></td>
           </tr>
         </tbody>
       </table>

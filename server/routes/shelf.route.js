@@ -39,6 +39,21 @@ router.post('/', (request, response) => {
     })
 })
 
+router.delete('/:id', (req, res) => {
+    let thisItem = req.params.id;
+    console.log('deleting:', thisItem);
+    Item.findByIdAndRemove(
+        { "_id": thisItem }, (error, deletedItem) => {
+            if(error){
+                console.log('delete error', error);
+                res.sendStatus(500);
+            } else{
+                console.log('delete success', deletedItem);
+                res.sendStatus(200);
+            }
+        }
+    )
+});
 
 
 
