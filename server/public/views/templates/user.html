@@ -21,7 +21,7 @@
           <tr>
             <td>{{item.itemName}}</td>
             <td>{{item.itemDescription}}</td>
-            <td>{{item.itemUrl}}</td>
+            <td><img ng-src="{{item.itemUrl}}" width="100px"></td>
             <td>{{item.userName}}</td>
             <td><button ng-click="sc.deleteItem(item._id)" class="btn btn-danger" ng-show="item.userName == sc.name">Take off Shelf!</button></td>
           </tr>
