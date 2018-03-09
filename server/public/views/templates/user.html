@@ -2,10 +2,10 @@
 <div class="container">
 
     <h1 id="welcome" class="lead">Welcome, {{vm.userObject.userName}}!</h1>
-    <button class="btn btn-default" ng-click="vm.userService.logout()">Log Out</button>
+    <button class="btn btn-info" ng-click="vm.userService.logout()">Log Out</button>
 </div>
 
-
+<section class="shelf">
 <div class="container" ng-controller="ShelfController as sc">
     <table class="table">
         <thead>
@@ -21,11 +21,12 @@
           <tr>
             <td>{{item.itemName}}</td>
             <td>{{item.itemDescription}}</td>
-            <td><img ng-src="{{item.itemUrl}}" width="100px"></td>
+            <td><img ng-src="{{item.itemUrl}}" width="180px"></td>
             <td>{{item.userName}}</td>
-            <td><button ng-click="sc.deleteItem(item._id)" class="btn btn-danger"
+            <td><button ng-click="sc.deleteItem(item._id)" class="btn btn-info"
               ng-show="item.userName == sc.name.userName || sc.name.admin == true ">Take off Shelf!</button></td>
           </tr>
         </tbody>
       </table>
 </div>
+</section>

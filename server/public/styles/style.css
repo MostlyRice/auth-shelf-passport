@@ -1,10 +1,32 @@
+.login {
+    margin-top: 20px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 20px;
+}
+
+.shelf {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.shelf-title {
+    border-bottom: 2px solid;
+}
+
+th {
+    background-color: crimson;
+    color: #DDDDDD
+}
+
 .instructions .container h1 {
     font-size: 24px;
     font-weight: 700;
 }
 
 .instructions {
-    background-color: #333333;
+    background-color: crimson;
     color: #DDDDDD;
 }
 
@@ -72,3 +94,4 @@ li a:hover {
     text-decoration: underline;
     color: #eee;
 }
+
