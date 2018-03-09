@@ -11,8 +11,11 @@
       <input type="text" name="description" class="form-control" ng-model="vm.newItem.itemDescription" placeholder="Description"/>
       </div>
       <div class="form-group col-md-8">
-      <label for="url">Item Image:</label>
-      <input type="text" name="url" class="form-control" ng-model="vm.newItem.itemUrl" placeholder="Image"/>
+      <label ng-if="vm.typeUrl" for="url">Item Image:</label>
+      <input ng-if="vm.typeUrl" type="text" name="url" class="form-control" ng-model="vm.newItem.itemUrl" placeholder="Image"/>
+      <button ng-click="vm.upload(); vm.typeUrl = false" class="btn btn-warning">Upload image on Shelf!</button>
+      <button ng-click="vm.typeUrl = true" class="btn btn-warning">Type URL for image on Shelf!</button>
+      <p ng-if="vm.uploadSuccess.success">Success!</p>
       </div>
       <div class="form-group col-md-6">
       <button ng-click="vm.addItem(vm.newItem, vm.name)" class="btn btn-success">Place on Shelf!</button>

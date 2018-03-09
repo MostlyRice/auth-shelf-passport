@@ -1,5 +1,6 @@
 var myApp = angular.module('myApp', ['ngRoute']);
 
+
 /// Routes ///
 myApp.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
   $routeProvider
@@ -35,4 +36,5 @@ myApp.config(['$routeProvider', '$locationProvider', function ($routeProvider, $
     .otherwise({
       template: '<h1>404</h1>'
     });
+
 }]);
