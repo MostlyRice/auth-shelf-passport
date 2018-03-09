@@ -5,6 +5,8 @@ myApp.service('ShelfService', ['$http', '$location', function ($http, $location)
     self.uploadSuccess = {success: false};
     self.shelfObject = {list: []};
     self.newItem = {};
+    //Instantiating dialog with Filestack
+    self.client = filestack.init("ASYgNuRdqTkmiELkrSnfIz");
 
     self.getShelf = function() {
         $http({
@@ -37,7 +39,7 @@ self.addItem = function(newItem, name) {
 self.upload = function(){
   console.log('in upload');
   self.typeUrl = false;
-  client.pick({
+  self.client.pick({
     accept:'image/*',
     maxFiles: 1
   }).then(function(result){
