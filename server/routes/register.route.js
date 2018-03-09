@@ -12,20 +12,21 @@ router.post('/', function(req, res, next) {
   */
   var userToSave = {
     username : req.body.username,
-    password : req.body.password
+    password : req.body.password,
+    admin: req.body.admin
   };
 
   // save to database, triggers user model pre-save hook
   User.create(userToSave, function(err, post) {
         if(err) {
-          console.log('error saving to db: ', err);           
+          console.log('error saving to db: ', err);
           res.sendStatus(500);
         } else {
-          console.log('created new user in db: ', post);          
+          console.log('created new user in db: ', post);
           res.sendStatus(201);
         }
   });
-  
+
 });
 
 
