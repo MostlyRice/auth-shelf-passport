@@ -10,7 +10,8 @@ router.get('/', function(req, res) {
     // send back user object from database
     console.log('logged in');
     var userInfo = {
-      username : req.user.username // req.user comes from passport, means we don't have to trust req.body any more
+      username : req.user.username, // req.user comes from passport, means we don't have to trust req.body any more
+      admin: req.user.admin
     };
     res.send(userInfo);
   } else {

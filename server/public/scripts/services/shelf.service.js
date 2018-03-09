@@ -11,10 +11,7 @@ myApp.service('ShelfService', ['$http', '$location', function ($http, $location)
             method:'GET',
             url:'/shelf'
         }).then(function (response) {
-            console.log(response.data);
             self.shelfObject.list = response.data;
-            console.log(self.shelfObject.list[0].userName,'user name at 0');
-            console.log();
         }).catch(function (error) {
             console.log('get error', error);
         })
