@@ -1,3 +1,11 @@
+Michael Gregoire  
+Selena Carlson
+James Nguyen
+Dan Shugarts
+
+
+
+
 # Full Stack with Auth Group Project
 
 Setup Directions
